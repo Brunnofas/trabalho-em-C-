@@ -3,7 +3,7 @@
   
 struct Produto
 {
-  char descri��o[50];
+  char descrição[50];
   float preco;
 };
 
@@ -46,7 +46,7 @@ void inserir(struct Fila *f, int v) {
 
 }
 
-int remover( struct Fila *f ) { // pega o item do começo da fila
+int remover( struct Fila *f ) { // pega o item do comeÃ§o da fila
 
 	int temp = f->dados[f->primeiro++]; // pega o valor e incrementa o primeiro
 
@@ -58,13 +58,13 @@ int remover( struct Fila *f ) { // pega o item do começo da fila
 
 }
 
-int estaVazia( struct Fila *f ) { // retorna verdadeiro se a fila está vazia
+int estaVazia( struct Fila *f ) { // retorna verdadeiro se a fila estÃ¡ vazia
 
 	return (f->nItens==0);
 
 }
 
-int estaCheia( struct Fila *f ) { // retorna verdadeiro se a fila está cheia
+int estaCheia( struct Fila *f ) { // retorna verdadeiro se a fila estÃ¡ cheia
 
 	return (f->nItens == f->capacidade);
 }
@@ -157,3 +157,15 @@ void main () {
 	}
 }
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+ 
+int main(int argc, char *argv[]){
+  time_t data_hora_segundos; // guarda os segundos deste 01/01/1970
+  struct tm *timeinfo; // declara uma estrutura tm
+  time(&data_hora_segundos); // preenche a variável data_hora_segundos
+  // preenche a estrutura timeinfo
+  timeinfo = localtime(&data_hora_segundos);
+ 
+  // obtém e exibe a data atual no formato DD/MM/YYYY
