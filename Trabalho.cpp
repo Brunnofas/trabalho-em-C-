@@ -3,7 +3,7 @@
   
 struct Produto
 {
-  char descri��o[50];
+  char descrição[50];
   float preco;
 };
 
@@ -46,7 +46,7 @@ void inserir(struct Fila *f, int v) {
 
 }
 
-int remover( struct Fila *f ) { // pega o item do começo da fila
+int remover( struct Fila *f ) { // pega o item do comeÃ§o da fila
 
 	int temp = f->dados[f->primeiro++]; // pega o valor e incrementa o primeiro
 
@@ -58,13 +58,13 @@ int remover( struct Fila *f ) { // pega o item do começo da fila
 
 }
 
-int estaVazia( struct Fila *f ) { // retorna verdadeiro se a fila está vazia
+int estaVazia( struct Fila *f ) { // retorna verdadeiro se a fila estÃ¡ vazia
 
 	return (f->nItens==0);
 
 }
 
-int estaCheia( struct Fila *f ) { // retorna verdadeiro se a fila está cheia
+int estaCheia( struct Fila *f ) { // retorna verdadeiro se a fila estÃ¡ cheia
 
 	return (f->nItens == f->capacidade);
 }
@@ -122,7 +122,7 @@ void main () {
 
 				break;
 
-			case 2: // remove elemento
+			case 2: // retirar elemento
 				if (estaVazia(&umaFila)){
 
 					printf("\nFila vazia!!!\n\n");
@@ -130,8 +130,8 @@ void main () {
 				}
 				else {
 
-					valor = remover(&umaFila);
-					printf("\n%1f removido com sucesso\n\n", valor) ; 
+					valor = retirar(&umaFila);
+					printf("\n%1f retirado com sucesso\n\n", valor) ; 
 
 				}
 				break;
